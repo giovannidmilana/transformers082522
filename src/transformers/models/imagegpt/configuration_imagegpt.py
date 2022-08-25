@@ -105,7 +105,7 @@ class ImageGPTConfig(PretrainedConfig):
         vocab_size=512 + 1,  # add one for start of sentence (sos) token
         n_positions=32 * 32,
         n_embd=512,
-        n_layer=24,
+        n_layer=3,
         n_head=8,
         n_inner=None,
         activation_function="quick_gelu",
