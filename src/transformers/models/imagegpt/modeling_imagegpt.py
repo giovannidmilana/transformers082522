@@ -24,7 +24,7 @@ import torch.utils.checkpoint
 from torch import nn
 from torch.nn import BCEWithLogitsLoss, CrossEntropyLoss, MSELoss
 
-from ..pytorch_utils import (
+from ...pytorch_utils import (
     Conv1D,
     find_pruneable_heads_and_indices,
     is_torch_greater_or_equal_than_1_6,
