@@ -1064,6 +1064,10 @@ class ImageGPTForCausalImageModeling(ImageGPTPreTrainedModel):
             shift_labels = labels[..., 1:].contiguous()
             # Flatten the tokens
             loss_fct = CrossEntropyLoss()
+            print("shifted logits")
+            print(shift_logits.view(-1, shift_logits.size(-1)))
+            print("shifted labels")
+            print(shift_labels.view(-1))
             loss = loss_fct(shift_logits.view(-1, shift_logits.size(-1)), shift_labels.view(-1))
 
         if not return_dict:
