@@ -1066,10 +1066,10 @@ class ImageGPTForCausalImageModeling(ImageGPTPreTrainedModel):
             loss_fct = CrossEntropyLoss()
             print("shifted logits")
             print(shift_logits.view(-1, shift_logits.size(-1)))
-            print(shift_logits.view(-1, shift_logits.size(-1)).size)
+            print(shift_logits.view(-1, shift_logits.size(-1)).size())
             print("shifted labels")
             print(shift_labels.view(-1))
-            print(shift_labels.view(-1).size)
+            print(shift_labels.view(-1).size())
             loss = loss_fct(shift_logits.view(-1, shift_logits.size(-1)), shift_labels.view(-1))
 
         if not return_dict:
