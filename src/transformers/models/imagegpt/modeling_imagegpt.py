@@ -643,7 +643,7 @@ class ImageGPTModel(ImageGPTPreTrainedModel):
         self.wpe = nn.Embedding(config.max_position_embeddings, self.embed_dim)
 
         self.drop = nn.Dropout(config.embd_pdrop)
-        self.h = nn.ModuleList([ImageGPTBlock(config, layer_idx=i) for i in range(12, 24)])
+        self.h = nn.ModuleList([ImageGPTBlock(config, layer_idx=i) for i in range(0, 2)])
         self.ln_f = ImageGPTLayerNorm(self.embed_dim, eps=config.layer_norm_epsilon)
 
         # Model parallel
